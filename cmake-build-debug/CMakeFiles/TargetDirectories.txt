@@ -1,0 +1,3 @@
+C:/Users/vovad/CLionProjects/VectorC/cmake-build-debug/CMakeFiles/VectorC.dir
+C:/Users/vovad/CLionProjects/VectorC/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/vovad/CLionProjects/VectorC/cmake-build-debug/CMakeFiles/rebuild_cache.dir
