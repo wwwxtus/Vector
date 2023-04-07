@@ -9,5 +9,6 @@ typedef struct vector {
 
 Vector createVector(int n);
 void reserve(Vector *v, int newCapacity);
+void clear(Vector *v);
 
 #endif //VECTORC_VECTOR_H

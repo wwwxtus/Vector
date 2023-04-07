@@ -22,3 +22,7 @@ void reserve(Vector *v, int newCapacity) {
 
     v->capacity = newCapacity;
 }
+
+void clear(Vector *v) {
+    v->size = 0;
+}
