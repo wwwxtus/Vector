@@ -4,9 +4,9 @@
 int main() {
     Vector v = createVector(5);
 
-    reserve(&v, 0);
+    shrinkToFit(&v);
 
-    printf("%d %d", v.capacity, v.data);
+    printf("%d", v.capacity);
 
     return 0;
 }

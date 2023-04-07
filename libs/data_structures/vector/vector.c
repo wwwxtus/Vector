@@ -26,3 +26,7 @@ void reserve(Vector *v, int newCapacity) {
 void clear(Vector *v) {
     v->size = 0;
 }
+
+void shrinkToFit(Vector *v) {
+    v->capacity = v->size;
+}
