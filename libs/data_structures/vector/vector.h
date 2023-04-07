@@ -22,5 +22,6 @@ bool isFull(Vector *v);
 
 int getVectorValue(Vector *v, int i);
 void pushBack(Vector *v, int x);
+void popBack(Vector *v);
 
 #endif //VECTORC_VECTOR_H

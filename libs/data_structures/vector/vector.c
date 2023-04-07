@@ -2,6 +2,8 @@
 #include <memory.h>
 #include <stdio.h>
 #include <stdbool.h>
+#include <string.h>
+#include <assert.h>
 #include "vector.h"
 
 //first_full_commit
@@ -69,4 +71,10 @@ void pushBack(Vector *v, int x) {
     v->data[v -> size] = x;
 
     v->size += 1;
+}
+
+void popBack(Vector *v) {
+    assert(v->size != 0);
+    int el = v->data[v->size - 1];
+    v->size--;
 }
