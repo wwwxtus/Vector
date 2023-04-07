@@ -16,4 +16,6 @@ void deleteVector(Vector *v);
 
 bool isEmpty(Vector *v);
 bool isFull(Vector *v);
+
+int getVectorValue(Vector *v, int i);
 #endif //VECTORC_VECTOR_H

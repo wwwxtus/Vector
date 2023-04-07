@@ -46,3 +46,7 @@ bool isEmpty(Vector *v) {
 bool isFull(Vector *v) {
     return v->size == v->capacity ? true : false;
 }
+
+int getVectorValue(Vector *v, int i) {
+    return v->data[i];
+}
