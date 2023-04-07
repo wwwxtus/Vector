@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include "vector.h"
 
+//first_full_commit
 Vector createVector(int n) {
     if (n >= 1000000000) {
         fprintf(stderr, "bad alloc");

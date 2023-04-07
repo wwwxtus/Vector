@@ -1,6 +1,7 @@
 #ifndef VECTORC_VECTOR_H
 #define VECTORC_VECTOR_H
 
+//first_full_commit
 typedef struct vector {
     int *data; // указатель на элементы вектора
     int size; // размер вектора
