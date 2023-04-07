@@ -50,3 +50,13 @@ bool isFull(Vector *v) {
 int getVectorValue(Vector *v, int i) {
     return v->data[i];
 }
+
+void pushBack(Vector *v, int x) {
+    if (v->size == v->capacity) {
+        reserve(v, v->capacity * 2);
+    }
+
+    v->data[v -> size] = x;
+
+    v->size += 1;
+}

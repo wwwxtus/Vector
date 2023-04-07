@@ -18,4 +18,6 @@ bool isEmpty(Vector *v);
 bool isFull(Vector *v);
 
 int getVectorValue(Vector *v, int i);
+void pushBack(Vector *v, int x);
+
 #endif //VECTORC_VECTOR_H
