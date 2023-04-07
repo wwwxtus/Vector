@@ -1,3 +1,5 @@
+#include <stdbool.h>
+
 #ifndef VECTORC_VECTOR_H
 #define VECTORC_VECTOR_H
 
@@ -9,6 +11,7 @@ typedef struct vector {
 } Vector;
 
 Vector createVector(int n);
+Vector getVectorFromArray(const int * const a, int size);
 void reserve(Vector *v, int newCapacity);
 void clear(Vector *v);
 void shrinkToFit(Vector *v);

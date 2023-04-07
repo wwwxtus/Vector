@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <memory.h>
 #include <stdio.h>
 #include <stdbool.h>
 #include "vector.h"
@@ -15,6 +16,15 @@ Vector createVector(int n) {
             0,
             n
     };
+}
+
+Vector getVectorFromArray(const int * const a, int size) {
+    Vector v;
+    v.data = (int*)malloc(sizeof(int)*size);
+    memcpy(v.data, a, sizeof(int) * size);
+    v.size = size;
+    v.capacity = size;
+    return v;
 }
 
 void reserve(Vector *v, int newCapacity) {
