@@ -8,5 +8,6 @@ typedef struct vector {
 } Vector;
 
 Vector createVector(int n);
+void reserve(Vector *v, int newCapacity);
 
 #endif //VECTORC_VECTOR_H

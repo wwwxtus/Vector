@@ -14,3 +14,11 @@ Vector createVector(int n) {
             n
     };
 }
+
+void reserve(Vector *v, int newCapacity) {
+    if (newCapacity == 0) {
+        v->data = NULL;
+    }
+
+    v->capacity = newCapacity;
+}
