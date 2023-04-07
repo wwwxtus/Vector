@@ -51,6 +51,8 @@ void deleteVector(Vector *v) {
     v->capacity = 0;
 }
 
+
+//two_full_commit
 bool isEmpty(Vector *v) {
     return v->size == 0 ? true : false;
 }

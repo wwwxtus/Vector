@@ -17,6 +17,7 @@ void clear(Vector *v);
 void shrinkToFit(Vector *v);
 void deleteVector(Vector *v);
 
+//two_full_commit
 bool isEmpty(Vector *v);
 bool isFull(Vector *v);
 
