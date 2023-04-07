@@ -1,5 +1,4 @@
-//
-// Created by vovad on 07.04.2023.
-//
-
+#include <stdlib.h>
+#include <stdio.h>
 #include "vector.h"
+
