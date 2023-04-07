@@ -11,5 +11,6 @@ Vector createVector(int n);
 void reserve(Vector *v, int newCapacity);
 void clear(Vector *v);
 void shrinkToFit(Vector *v);
+void deleteVector(Vector *v);
 
 #endif //VECTORC_VECTOR_H

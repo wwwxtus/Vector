@@ -30,3 +30,9 @@ void clear(Vector *v) {
 void shrinkToFit(Vector *v) {
     v->capacity = v->size;
 }
+
+void deleteVector(Vector *v) {
+    free(v->data);
+    v->size = 0;
+    v->capacity = 0;
+}
