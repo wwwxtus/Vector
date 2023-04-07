@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <stdbool.h>
 #include "vector.h"
 
 //first_full_commit
@@ -36,4 +37,12 @@ void deleteVector(Vector *v) {
     free(v->data);
     v->size = 0;
     v->capacity = 0;
+}
+
+bool isEmpty(Vector *v) {
+    return v->size == 0 ? true : false;
+}
+
+bool isFull(Vector *v) {
+    return v->size == v->capacity ? true : false;
 }

@@ -14,4 +14,6 @@ void clear(Vector *v);
 void shrinkToFit(Vector *v);
 void deleteVector(Vector *v);
 
+bool isEmpty(Vector *v);
+bool isFull(Vector *v);
 #endif //VECTORC_VECTOR_H
