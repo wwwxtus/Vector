@@ -8,21 +8,23 @@
 
 //first_full_commit
 Vector createVector(int n) {
-    if (n >= 1000000000) {
+    Vector v;
+    v.data = malloc(sizeof(int) * n);
+    if (!v.data) {
         fprintf(stderr, "bad alloc");
         exit(1);
     }
 
     return (Vector) {
-            NULL,
+            v.data,
             0,
             n
     };
 }
 
-Vector getVectorFromArray(const int * const a, int size) {
+Vector getVectorFromArray(const int *const a, int size) {
     Vector v;
-    v.data = (int*)malloc(sizeof(int)*size);
+    v.data = (int *) malloc(sizeof(int) * size);
     memcpy(v.data, a, sizeof(int) * size);
     v.size = size;
     v.capacity = size;
@@ -32,9 +34,10 @@ Vector getVectorFromArray(const int * const a, int size) {
 void reserve(Vector *v, int newCapacity) {
     if (newCapacity == 0) {
         v->data = NULL;
+        return;
     }
 
-    v->capacity = newCapacity;
+    v->data = realloc(v->data, newCapacity * sizeof(int));
 }
 
 void clear(Vector *v) {
@@ -42,15 +45,12 @@ void clear(Vector *v) {
 }
 
 void shrinkToFit(Vector *v) {
-    v->capacity = v->size;
+    v->data = realloc(v->data, v->size * sizeof(int));
 }
 
 void deleteVector(Vector *v) {
     free(v->data);
-    v->size = 0;
-    v->capacity = 0;
 }
-
 
 //two_full_commit
 bool isEmpty(Vector *v) {
@@ -58,7 +58,7 @@ bool isEmpty(Vector *v) {
 }
 
 bool isFull(Vector *v) {
-    return v->size == v->capacity ? true : false;
+    return (v->size == v->capacity) && (v->size != 0) ? true : false;
 }
 
 int getVectorValue(Vector *v, int i) {
@@ -66,25 +66,25 @@ int getVectorValue(Vector *v, int i) {
 }
 
 void pushBack(Vector *v, int x) {
-    if (v->size == v->capacity) {
+    if (isFull(v)) {
         reserve(v, v->capacity * 2);
     }
 
-    v->data[v -> size] = x;
+    if (v->size == 0 && v->capacity == 0) {
+        v->capacity++;
+    }
 
-    v->size += 1;
+    v->data[v->size++] = x;
 }
 
 void popBack(Vector *v) {
     assert(v->size != 0);
-    int el = v->data[v->size - 1];
     v->size--;
 }
 
-
 //three_full_commit
-int* atVector(Vector *v, int index) {
-    if(index > v->size) {
+int *atVector(Vector *v, int index) {
+    if (index > v->size) {
         fprintf(stderr, "IndexError: a[index] is not exists");
         exit(1);
     }
@@ -92,10 +92,10 @@ int* atVector(Vector *v, int index) {
     return &v->data[index];
 }
 
-int* back(Vector *v) {
+int *back(Vector *v) {
     return &v->data[v->size - 1];
 }
 
-int* front(Vector *v) {
+int *front(Vector *v) {
     return &v->data[0];
 }
