@@ -25,6 +25,7 @@ int getVectorValue(Vector *v, int i);
 void pushBack(Vector *v, int x);
 void popBack(Vector *v);
 
+//three_full_commit
 int* atVector(Vector *v, int index);
 int* back(Vector *v);
 int* front(Vector *v);

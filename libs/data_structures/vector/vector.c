@@ -81,6 +81,8 @@ void popBack(Vector *v) {
     v->size--;
 }
 
+
+//three_full_commit
 int* atVector(Vector *v, int index) {
     if(index > v->size) {
         fprintf(stderr, "IndexError: a[index] is not exists");
