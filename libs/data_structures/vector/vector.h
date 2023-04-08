@@ -26,4 +26,5 @@ void pushBack(Vector *v, int x);
 void popBack(Vector *v);
 
 int* atVector(Vector *v, int index);
+int* back(Vector *v);
 #endif //VECTORC_VECTOR_H

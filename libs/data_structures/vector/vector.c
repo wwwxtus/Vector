@@ -89,3 +89,7 @@ int* atVector(Vector *v, int index) {
 
     return &v->data[index];
 }
+
+int* back(Vector *v) {
+    return &v->data[v->size - 1];
+}
