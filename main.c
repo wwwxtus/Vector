@@ -48,13 +48,5 @@ void test_popBack_notEmptyVector() {
 
 
 int main() {
-    int a[] = {1,2,3,4,5,10};
-
-    Vector v = getVectorFromArray(a, 6);
-
-    int *z = back(&v);
-
-    printf("%p", z);
-
     return 0;
 }

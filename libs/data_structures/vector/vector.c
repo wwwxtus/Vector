@@ -93,3 +93,7 @@ int* atVector(Vector *v, int index) {
 int* back(Vector *v) {
     return &v->data[v->size - 1];
 }
+
+int* front(Vector *v) {
+    return &v->data[0];
+}

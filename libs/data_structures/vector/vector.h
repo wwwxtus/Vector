@@ -27,4 +27,5 @@ void popBack(Vector *v);
 
 int* atVector(Vector *v, int index);
 int* back(Vector *v);
+int* front(Vector *v);
 #endif //VECTORC_VECTOR_H
