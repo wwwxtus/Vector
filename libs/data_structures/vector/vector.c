@@ -53,7 +53,7 @@ void clear(Vector *v) {
 }
 
 void shrinkToFit(Vector *v) {
-    v->data = realloc(v->data, v->size * sizeof(int));
+    reserve(v, v->size);
 }
 
 void deleteVector(Vector *v) {
