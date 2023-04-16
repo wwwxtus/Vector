@@ -43,7 +43,9 @@ void reserve(Vector *v, int newCapacity) {
     }
 
     v->capacity = newCapacity;
-    v->size = newCapacity;
+    if (newCapacity < v->size) {
+        v->size = newCapacity;
+    }
 }
 
 void clear(Vector *v) {
