@@ -36,8 +36,14 @@ void reserve(Vector *v, int newCapacity) {
         v->data = NULL;
         return;
     }
-
     v->data = realloc(v->data, newCapacity * sizeof(int));
+    if (!v->data) {
+        fprintf(stderr, "bad alloc");
+        exit(1);
+    }
+
+    v->capacity = newCapacity;
+    v->size = newCapacity;
 }
 
 void clear(Vector *v) {
